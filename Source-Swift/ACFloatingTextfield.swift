@@ -225,7 +225,8 @@ fileprivate extension ACFloatingTextfield {
         labelPlaceholder?.text = placeholderText
         labelPlaceholder?.textAlignment = self.textAlignment
         labelPlaceholder?.textColor = placeHolderColor
-        labelPlaceholder?.font = UIFont.init(name: (self.font?.fontName ?? "helvetica")!, size: 12)
+//        labelPlaceholder?.font = UIFont.init(name: (self.font?.fontName ?? "helvetica")!, size: 12)
+        labelPlaceholder?.font = UIFont.systemFont(ofSize: 12)
         labelPlaceholder?.isHidden = true
         labelPlaceholder?.sizeToFit()
         labelPlaceholder?.translatesAutoresizingMaskIntoConstraints = false
@@ -253,7 +254,8 @@ fileprivate extension ACFloatingTextfield {
         labelErrorPlaceholder?.text = self.errorText
         labelErrorPlaceholder?.textAlignment = self.textAlignment
         labelErrorPlaceholder?.textColor = errorTextColor
-        labelErrorPlaceholder?.font = UIFont(name: (self.font?.fontName ?? "helvetica")!, size: 12)
+//        labelErrorPlaceholder?.font = UIFont(name: (self.font?.fontName ?? "helvetica")!, size: 12)
+        labelErrorPlaceholder?.font = UIFont.systemFont(ofSize: 12)
         labelErrorPlaceholder?.sizeToFit()
         labelErrorPlaceholder?.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(labelErrorPlaceholder!)
@@ -353,7 +355,8 @@ fileprivate extension ACFloatingTextfield {
         }
 
         placeholderLabelHeight?.constant = 15;
-        labelPlaceholder?.font = UIFont(name: (self.font?.fontName)!, size: 12)
+//        labelPlaceholder?.font = UIFont(name: (self.font?.fontName)!, size: 12)
+        labelPlaceholder?.font = UIFont.systemFont(ofSize: 12)
 
         UIView.animate(withDuration: 0.2, animations: {
             self.layoutIfNeeded()
